@@ -7,8 +7,21 @@ const xrmTest = new XrmUiTest();
 let browser: puppeteer.Browser = null;
 let page: puppeteer.Page = null;
 
-const clearFiles = (pathName: string, fileEndings: Array<string>): Promise<void> => {
-    return new Promise((resolve, reject) => fs.readdir(pathName, (err, files) => err ? reject(err) : resolve(files.filter(f => fileEndings.some(e => f.endsWith(e))).forEach(f => fs.unlinkSync(path.resolve(pathName, f))))));
+const clearFiles = async (pathName: string, fileEndings: Array<string>): Promise<void> => {
+    const folderExists = await new Promise((resolve, reject) => 
+        fs.exists(pathName, (exists) => {
+            resolve(exists);
+        })
+    );
+
+    if (folderExists) {
+        return;
+    }
+
+    return new Promise((resolve, reject) => 
+        fs.readdir(pathName, (err, files) => err 
+            ? reject(err) 
+            : resolve(files.filter(f => fileEndings.some(e => f.endsWith(e))).forEach(f => fs.unlinkSync(path.resolve(pathName, f))))));
 }
 
 describe("Basic operations UCI", () => {
