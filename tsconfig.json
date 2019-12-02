@@ -3,11 +3,11 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "ES6",
+        "module": "commonjs",
         "moduleResolution": "node",
         "allowJs": true,
         "baseUrl": ".",
-        "target": "es6",
+        "target": "es2018",
         "jsx": "react",
         "paths": {
             "*": [
