@@ -14,7 +14,7 @@ const clearFiles = async (pathName: string, fileEndings: Array<string>): Promise
         })
     );
 
-    if (folderExists) {
+    if (!folderExists) {
         return;
     }
 
