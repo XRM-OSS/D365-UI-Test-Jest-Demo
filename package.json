@@ -1,0 +1,26 @@
+{
+  "name": "d365-ui-test-demo-jest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Florian Kroenert",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/puppeteer": "^1.12.4",
+    "@types/xrm": "^9.0.14",
+    "babel-jest": "^24.8.0",
+    "d365-ui-test": "0.0.15",
+    "jest": "^24.8.0",
+    "jest-html-reporter": "^2.7.0",
+    "jest-junit": "^6.4.0",
+    "puppeteer": "^1.18.1",
+    "puppeteer-firefox": "^0.5.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {}
+}
