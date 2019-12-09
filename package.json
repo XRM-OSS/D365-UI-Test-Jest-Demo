@@ -13,7 +13,7 @@
     "@types/puppeteer": "^1.12.4",
     "@types/xrm": "^9.0.14",
     "babel-jest": "^24.8.0",
-    "d365-ui-test": "0.0.34",
+    "d365-ui-test": "0.0.37",
     "jest": "^24.8.0",
     "jest-html-reporter": "^2.7.0",
     "jest-junit": "^6.4.0",
