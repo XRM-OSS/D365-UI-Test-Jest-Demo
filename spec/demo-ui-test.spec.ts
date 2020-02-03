@@ -37,7 +37,7 @@ describe("Basic operations UCI", () => {
     });
 
     test("Start D365", async () => {
-        const config = fs.readFileSync("C:/temp/settings.txt", {encoding: 'utf-8'});
+        const config = fs.readFileSync(path.join(__dirname, "../../settings.txt"), {encoding: 'utf-8'});
         const [url, user, password] = config.split(",");
 
         page = await xrmTest.open(url, { userName: user, password: password });
