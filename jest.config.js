@@ -5,11 +5,7 @@ module.exports = {
     },
     reporters: [
         "default",
-          [ "jest-junit", { suiteName: "D365 UI Tests", outputDirectory: "reports", outputName: `junit_${new Date().toISOString().replace(/:/g, "")}.xml` } ],
-          ["jest-html-reporter", {
-            "outputPath": `reports/testSummary_${new Date().toISOString().replace(/:/g, "")}.html`,
-            "pageTitle": "Test Report"
-          }]
+          [ "jest-junit", { suiteName: "D365 UI Tests", outputDirectory: "reports", outputName: `junit_${new Date().toISOString().replace(/:/g, "")}.xml` } ]
     ],
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
