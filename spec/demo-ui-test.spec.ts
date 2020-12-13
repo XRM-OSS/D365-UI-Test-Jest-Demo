@@ -32,9 +32,9 @@ describe("Basic operations UCI", () => {
 
     test("Start D365", async () => {
         const config = fs.readFileSync(path.join(__dirname, "../../settings.txt"), {encoding: 'utf-8'});
-        const [url, user, password] = config.split(",");
+        const [url, user, password, mfaSecret] = config.split(",");
 
-        await xrmTest.open(url, { userName: user, password: password });
+        await xrmTest.open(url, { userName: user, password: password, mfaSecret: mfaSecret ?? undefined });
     });
 
     test("Open new account form", async () => {
