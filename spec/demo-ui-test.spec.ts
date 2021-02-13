@@ -13,7 +13,7 @@ describe("Basic operations UCI", () => {
         jest.setTimeout(60000);
 
         await xrmTest.launch("chromium", {
-            headless: false,
+            headless: !!process.env.D365_UI_TEST_HEADLESS,
             args: [
                 '--disable-setuid-sandbox',
                 '--disable-infobars',
