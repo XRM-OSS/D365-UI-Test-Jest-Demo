@@ -33,7 +33,7 @@ describe("Basic operations UCI", () => {
     test("Start D365", async () => {
         const settingsPath = path.join(__dirname, "../../settings.txt");
         const settingsFound = fs.existsSync(settingsPath);
-        const config = settingsFound ? fs.readFileSync(settingsPath, {encoding: 'utf-8'}) : `${process.env.CRM_URL ?? ""},${process.env.USER_NAME ?? ""},${process.env.USER_PASSWORD ?? ""},${process.env.MFA_SECRET ?? ""}`;
+        const config = settingsFound ? fs.readFileSync(settingsPath, {encoding: "utf-8"}) : `${process.env.D365_UI_TEST_URL ?? process.env.CRM_URL ?? ""},${process.env.D365_UI_TEST_USERNAME ?? process.env.USER_NAME ?? ""},${process.env.D365_UI_TEST_PASSWORD ?? process.env.USER_PASSWORD ?? ""},${process.env.D365_UI_TEST_MFA_SECRET ?? process.env.MFA_SECRET ?? ""}`;
         
         const [url, user, password, mfaSecret] = config.split(",");
 
